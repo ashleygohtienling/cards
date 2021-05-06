@@ -1,11 +1,20 @@
 import React from 'react'
 
-const Card = () => {
+import {Link} from 'react-router-dom'
+
+const Card = ({data}) => {
     return (
-        <div>
+        <>
+        {data.map ((card,index) => (
+            <div key = {index} className = "card"> 
+            <h1>{card.title}</h1> 
+            <p>{card.description}</p>
+            <Link to = {`/cards/${card.title}`}>View More </Link>
+            </div>
+        ))};
             
-        </div>
-    )
+        </>
+    );
 }
 
 export default Card

@@ -1,11 +1,13 @@
+import { text } from '@fortawesome/fontawesome-svg-core';
 import React from 'react'
 import Card from './Card';
 
-function Hero(props) {
+
+const Hero = ({data}) => {
     return (
         <section className = "hero">
-            <div className = "container">
-            <Card data = {props.data}/>
+            <div style= {{backgroundColor:"#40538a", width:"800px"} } className = "container">
+            <Card data = {data}/>
             </div>
         </section>
     );
